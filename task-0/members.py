@@ -1,4 +1,3 @@
 [
-    {"name": "Cholwich Nattee", "sid": "6422771111"},
-    {"name": "Cholwich Nattee", "sid": "6422771111"},
+    {"name": "Pansisara Srisan", "sid": "6422781326"}
 ]

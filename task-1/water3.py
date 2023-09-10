@@ -5,6 +5,7 @@ def is_goal(s):
     return True
 
 # returns a list of successors
+# format: must ne ( (a, b, c), cost )
 def successors(s):
 
     # keeps track of bottle sizes
@@ -22,7 +23,7 @@ def successors(s):
                     successor = list(s) # tuple doesn't allow assignments
                     successor[from_index] -= pour_amount
                     successor[to_index] += pour_amount
-                    yield tuple(successor)
+                    yield tuple(successor), pour_amount
 
 
 # just a little test for my successor

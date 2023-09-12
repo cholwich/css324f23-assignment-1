@@ -51,4 +51,12 @@ def h1(s):
 def h3(s):
     # implement this function
     board, _, _ = s
-    return 0
+    res = 0
+    for row in range(3):
+        for col in range(3):
+            tile = board[row*3+col]
+            if tile != 0:
+                new_r = (tile-1) // 3
+                new_c = (tile-1) % 3
+                res += abs(row - new_r) + abs(col - new_c)
+    return res

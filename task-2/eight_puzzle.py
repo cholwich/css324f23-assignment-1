@@ -49,6 +49,15 @@ def h1(s):
     return res
 
 def h3(s):
-    # implement this function
     board, _, _ = s
-    return 0
+    h_value = 0
+
+    for r in range(3):
+        for c in range(3):
+            tile = board[r * 3 + c]
+            if tile != 0:
+                target_row = (tile - 1) // 3
+                target_col = (tile - 1) % 3
+                h_value += abs(r - target_row) + abs(c - target_col)
+
+    return h_value
